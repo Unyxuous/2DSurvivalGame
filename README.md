@@ -32,12 +32,14 @@ In Game:
 
 ## Initial Use-Cases
 * Changing the World:
+
    System: In game
    Actor: The player
    Scenario: The player has started a game and wants to change their surroundings. They hold left click over a block.
    Result: The block breaks and if it is wood, it drops and the player can pick it up, otherwise the block only drops if the player used the correct tool to break it.
 
 * Fight Enemy:
+
    System: In game
    Actor: The player
    Scenario: An enemy approaches the player. The player attacks the enemy.
