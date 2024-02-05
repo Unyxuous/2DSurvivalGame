@@ -43,3 +43,21 @@ In Game:
    Scenario: An enemy approaches the player. The player attacks the enemy.  
    Result: The enemy takes damage. If the enemy takes too much damage, they die. If the player misses their attack, the enemy may hit the player causing the player to lose health or die. If the player has a weapon, the enemy takes more damage and the player has a larger attack range equal to the weapons size.  
 
+* Manage Inventory:  
+   System: In game  
+   Actor: The player  
+   Scenario: The player has more items than can fit in their hotbar. They press a hotkey to expand their inventory.  
+   Result: Their inventory expands, and they can move items to and from their hotbar from their inventory.  
+
+* Manage Settings:  
+   System: In game  
+   Actor: The player  
+   Scenario: The player is in the game and wants to edit video/audio settings. They press the “Esc” key.  
+   Result: The settings menu pops up and has a button that says “Video” for video settings and “Audio” for audio settings. (As well as a save and quit button and a continue button).  
+
+* Continue from save:  
+   System: Main menu of the game  
+   Actor: The player  
+   Scenario: The player creates a world, modifies the world, then saves their progress.  
+   Result: A new button on the main menu that says “continue” reloads the last active save.  
+
