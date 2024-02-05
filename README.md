@@ -61,3 +61,5 @@ In Game:
    Scenario: The player creates a world, modifies the world, then saves their progress.  
    Result: A new button on the main menu that says “continue” reloads the last active save.  
 
+## Use-Case Diagram
+![Image of Use-Case Diagram](https://github.com/Unyxuous/2DSurvivalGame/blob/main/Design%20Documents/Use%20Case%20Diagram.png)
