@@ -63,3 +63,12 @@ In Game:
 
 ## Use-Case Diagram
 ![Image of Use-Case Diagram](https://github.com/Unyxuous/2DSurvivalGame/blob/main/Design%20Documents/Use%20Case%20Diagram.png)
+
+## Requirements Table
+|ID| Requirement                                         | Testable |
+|--|-----------------------------------------------------|---------:|
+|1 | The system shall let the user edit the terrain using various tools | Yes |
+|2 | The system shall let the user save their changes | Yes |
+|3 | The system shall let the user load previous saves | Yes |
+|4 | The system shall let the user edit their video/audio settings | Yes |
+|5 | The system shall let the user manage their inventory | Yes |
