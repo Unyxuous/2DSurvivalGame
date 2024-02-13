@@ -66,7 +66,7 @@ In Game:
 
 ## Requirements Table
 |ID| Requirement                                         | Testable |
-|--|-----------------------------------------------------|---------:|
+|--|-----------------------------------------------------|----------|
 |1 | The system shall let the user edit the terrain using various tools | Yes |
 |2 | The system shall let the user save their changes | Yes |
 |3 | The system shall let the user load previous saves | Yes |
