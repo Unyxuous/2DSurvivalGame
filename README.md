@@ -72,3 +72,9 @@ In Game:
 |3 | The system shall let the user load previous saves | Yes |
 |4 | The system shall let the user edit their video/audio settings | Yes |
 |5 | The system shall let the user manage their inventory | Yes |
+
+## Entity Relationship Diagram
+![Image of Entity Relationship Diagram](https://github.com/Unyxuous/2DSurvivalGame/blob/main/Design%20Documents/Entity%20Relationship%20Diagram.png)
+
+## UML Class Diagram
+![Image of Use-Case Diagram](https://github.com/Unyxuous/2DSurvivalGame/blob/main/Design%20Documents/UML%20Class%20Diagram.png)
