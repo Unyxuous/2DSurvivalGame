@@ -23,6 +23,9 @@ Audio Settings:
 In Game:
 ![Image of basic game layout](https://github.com/Unyxuous/2DSurvivalGame/blob/main/Design%20Documents/Game%20Screen.png)
 
+Expanded Inventory/Crafting Menu:
+![Image of basic game layout](https://github.com/Unyxuous/2DSurvivalGame/blob/main/Design%20Documents/Expanded%20Inventory.png)
+
 ## User Stories
 * As a player, I want to be able to place different types of blocks so that I can build a house that looks nice.
 * As a player, I want to be able to view and manage my inventory so that I can organize it how I see fit.
