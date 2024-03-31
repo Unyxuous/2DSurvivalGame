@@ -5,7 +5,8 @@ Player::Player():
 	player = true;
 
 	idle = new IdleState();
-	walk = new WalkState();
+	walking = new WalkState();
+	jumping = new JumpState();
 
 	playerState = idle;
 }
@@ -18,6 +19,12 @@ void Player::update() {
 	playerState->update(*this);
 }
 
+void Player::applyPhysics() {
+	if (playerState != jumping) {
+		
+	}
+}
+
 //needs to be updated to include tool checking and block placing based on inventory
 void Player::useItem(sf::RenderWindow& window, World& world) {
 	std::string pos = Grid::iToStr(sf::Mouse::getPosition(window).x / Grid::width, sf::Mouse::getPosition(window).y / Grid::height);
@@ -25,7 +32,6 @@ void Player::useItem(sf::RenderWindow& window, World& world) {
 		world.worldBlocks.erase(pos);
 	}
 }
-
 
 void Player::move(sf::Vector2f amt) {
 	sprite.move(amt * speed);

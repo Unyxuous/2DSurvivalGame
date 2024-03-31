@@ -14,7 +14,6 @@ protected:
 	const int height = 4;
 	bool player = false;
 	float health = 100;
-	sf::Vector2f location;
 	std::string name = "";
 	
 	sf::Texture texture;
@@ -26,9 +25,9 @@ public:
 	void damage(float);
 	void heal(float);
 	bool isPlayer();
+	bool collision(sf::FloatRect&);
 	virtual void move(sf::Vector2f) = 0;
 	void update();
-	void applyPhysics();
+	virtual void applyPhysics() = 0;
 	void draw(sf::RenderWindow&);
 };
-

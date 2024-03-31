@@ -12,3 +12,20 @@ Block::Block(sf::Texture& texture, int blocksPerLine, sf::Vector2i loc, int id, 
 void Block::draw(sf::RenderWindow& window) {
 	window.draw(sprite);
 }
+
+Block::BlockType Block::getBlockType(int index) {
+	switch (index) {
+	case 1:
+		return BlockType::stone;
+	case 2:
+		return BlockType::dirt;
+	case 3:
+		return BlockType::grass;
+	case 4:
+		return BlockType::wood;
+	case 5:
+		return BlockType::leaf;
+	}
+
+	return BlockType::stone;
+}

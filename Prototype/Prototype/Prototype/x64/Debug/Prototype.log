@@ -1,22 +1,4 @@
-﻿  GameStateManager.cpp
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         with
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         [
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:             T=unsigned int
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         ]
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         and
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         [
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:             T=float
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         ]
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         with
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         [
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:             T=unsigned int
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         ]
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         and
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         [
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:             T=float
-C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         ]
+﻿  World.cpp
   Prototype.vcxproj -> C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\x64\Debug\Prototype.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

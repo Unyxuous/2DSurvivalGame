@@ -19,12 +19,6 @@
     <Filter Include="Header Files\UI">
       <UniqueIdentifier>{987cee67-7aca-449d-ae19-ad8a8c3739ca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Data">
-      <UniqueIdentifier>{6091de37-6f28-4903-ac3a-c6dc93cd721e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Data">
-      <UniqueIdentifier>{09123cca-234b-4d73-b24b-98e1630a8756}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Graphics">
       <UniqueIdentifier>{11cda394-1411-407f-b6f2-3e1083814144}</UniqueIdentifier>
     </Filter>
@@ -75,9 +69,6 @@
     <ClCompile Include="Button.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
-    <ClCompile Include="Database.cpp">
-      <Filter>Source Files\Data</Filter>
-    </ClCompile>
     <ClCompile Include="GameStateManager.cpp">
       <Filter>Source Files\Logic</Filter>
     </ClCompile>
@@ -109,9 +100,6 @@
   <ItemGroup>
     <ClInclude Include="Button.h">
       <Filter>Header Files\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="Database.h">
-      <Filter>Header Files\Data</Filter>
     </ClInclude>
     <ClInclude Include="GameStateManager.h">
       <Filter>Header Files\Logic</Filter>

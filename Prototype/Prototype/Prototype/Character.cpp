@@ -7,9 +7,8 @@ Character::Character(std::string name, std::string textureLocation, sf::Vector2f
 		std::cout << "could not load " << textureLocation << std::endl;
 	}
 
-	location = spawnLocation;
 	sprite.setTexture(texture);
-	sprite.setPosition(location);
+	sprite.setPosition(spawnLocation);
 }
 
 void Character::damage(float amt) {
@@ -28,8 +27,8 @@ void Character::update() {
 	applyPhysics();
 }
 
-void Character::applyPhysics() {
-	
+bool Character::collision(sf::FloatRect& other) {
+	return sprite.getGlobalBounds().intersects(other);
 }
 
 void Character::draw(sf::RenderWindow& window) {

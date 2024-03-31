@@ -90,7 +90,7 @@ void GameStateManager::displayMainMenu() {
     exitBtn->setOnClick(std::bind(&GameStateManager::clickExit, this));
 
     //only show if a save exists
-    if (!firstPlay) {
+    if (!world.firstPlay) {
         buttons.push_back(continueBtn);
     }
 

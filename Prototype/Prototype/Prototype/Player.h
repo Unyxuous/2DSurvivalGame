@@ -19,12 +19,14 @@ public:
 	PlayerState* playerState;
 
 	PlayerState* idle;
-	PlayerState* walk;
+	PlayerState* walking;
+	PlayerState* jumping;
 
 	Player();
 
 	void manageInput(sf::RenderWindow&, World&);
 	void update();
+	void applyPhysics();
 	void useItem(sf::RenderWindow&, World&);
 	void move(sf::Vector2f);
 };

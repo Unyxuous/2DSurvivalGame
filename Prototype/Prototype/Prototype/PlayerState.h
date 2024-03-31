@@ -25,3 +25,9 @@ class WalkState : public PlayerState {
 	void update(Player&);
 	~WalkState();
 };
+
+class JumpState : public PlayerState {
+	void manageInput(sf::RenderWindow&, World&, Player&);
+	void update(Player&);
+	~JumpState();
+};

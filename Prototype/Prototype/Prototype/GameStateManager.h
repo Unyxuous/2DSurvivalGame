@@ -20,9 +20,6 @@ private:
 
 	sf::RectangleShape menuBackground;
 
-	//used to determine whether or not to show continue button on main menu
-	bool firstPlay = true;
-
 	World world;
 	Player player;
 

@@ -18,3 +18,7 @@ It doesn't have much functionality yet, but currently, the player can manage set
 
 ## In Game Screen
 ![Image showing in game screen](https://github.com/Unyxuous/2DSurvivalGame/blob/main/Prototype/Screenshots/InGame.png)
+
+## Data Access Layer
+My game is local and uses leveldb (which only offers Get and Put functions by default). If I were to add multiplayer, I would just need to send the worldData string to the client, and I would do so using SFML's Socket library.
+![Image showing Data Access Layer](https://github.com/Unyxuous/2DSurvivalGame/blob/main/Prototype/Screenshots/DataAccessLayer.png)

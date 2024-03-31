@@ -1,8 +1,79 @@
-﻿  main.cpp
+﻿  Block.cpp
+  Button.cpp
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Block.cpp(9,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Block.cpp(9,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,42): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,42): warning C4244:         with
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,42): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,42): warning C4244:             T=int
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,42): warning C4244:         ]
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,42): warning C4244:         and
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,42): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,42): warning C4244:             T=float
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,42): warning C4244:         ]
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,35): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,35): warning C4244:         with
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,35): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,35): warning C4244:             T=int
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,35): warning C4244:         ]
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,35): warning C4244:         and
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,35): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,35): warning C4244:             T=float
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp(40,35): warning C4244:         ]
+  Character.cpp
+  Enemy.cpp
+  GameStateManager.cpp
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         with
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:             T=unsigned int
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         ]
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         and
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:             T=float
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,77): warning C4244:         ]
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         with
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:             T=unsigned int
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         ]
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         and
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:             T=float
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp(6,57): warning C4244:         ]
+  Grid.cpp
+  main.cpp
+  Player.cpp
+  PlayerState.cpp
+  Slider.cpp
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,45): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,45): warning C4244:         with
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,45): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,45): warning C4244:             T=int
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,45): warning C4244:         ]
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,45): warning C4244:         and
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,45): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,45): warning C4244:             T=float
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,45): warning C4244:         ]
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,38): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,38): warning C4244:         with
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,38): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,38): warning C4244:             T=int
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,38): warning C4244:         ]
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,38): warning C4244:         and
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,38): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,38): warning C4244:             T=float
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(33,38): warning C4244:         ]
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(34,31): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(34,31): warning C4244:         with
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(34,31): warning C4244:         [
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(34,31): warning C4244:             T=int
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp(34,31): warning C4244:         ]
+  World.cpp
   Generating code
-  1 of 248 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  785 of 789 functions (99.5%) were compiled, the rest were copied from previous compilation.
+    545 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Prototype.vcxproj -> C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\x64\Release\Prototype.exe
   'pwsh.exe' is not recognized as an internal or external command,

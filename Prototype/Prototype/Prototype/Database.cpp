@@ -2,7 +2,7 @@
 
 Database::Database() {
     options.create_if_missing = true;
-    status = leveldb::DB::Open(options, "./testdb", &db);
+    status = leveldb::DB::Open(options, "./world", &db);
     //Make sure database was opened/made
     if (status.ok() == false)
     {

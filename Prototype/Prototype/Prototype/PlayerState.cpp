@@ -6,7 +6,7 @@ PlayerState::~PlayerState() {
 
 void IdleState::manageInput(sf::RenderWindow& window, World& world, Player& player) {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::D)) {
-		player.playerState = player.walk;
+		player.playerState = player.walking;
 	}
 	else if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 		player.useItem(window, world);
@@ -37,5 +37,17 @@ void WalkState::update(Player& player) {
 }
 
 WalkState::~WalkState() {
+	
+}
+
+void JumpState::manageInput(sf::RenderWindow&, World&, Player&) {
+	
+}
+
+void JumpState::update(Player&) {
+	
+}
+
+JumpState::~JumpState() {
 	
 }
