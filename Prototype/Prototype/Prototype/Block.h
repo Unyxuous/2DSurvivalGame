@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 #include <SFML/Graphics.hpp>
 
 #include "Grid.h"
@@ -7,17 +9,19 @@
 class Block
 {
 private:
-	sf::Sprite sprite;
 	int id = 0;
 
 public:
+	sf::Sprite sprite;
+
 	enum class BlockType { stone, dirt, grass, wood, leaf };
 	BlockType type = BlockType::dirt;
 
-	//Texture, blocks per line, location, block id, block type
-	Block(sf::Texture&, int, sf::Vector2i, int, BlockType);
+	//Texture, location, block id, images per line,
+	Block(const sf::Texture*, sf::Vector2i, int, int imagesPerLine = 4);
 
 	int getId() { return id; }
+	sf::FloatRect getRect() { return sprite.getGlobalBounds(); }
 	void draw(sf::RenderWindow&);
 
 	static BlockType getBlockType(int);

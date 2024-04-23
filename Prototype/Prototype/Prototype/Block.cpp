@@ -1,11 +1,14 @@
 #include "Block.h"
 
-Block::Block(sf::Texture& texture, int blocksPerLine, sf::Vector2i loc, int id, BlockType type) {
+Block::Block(const sf::Texture* texture, sf::Vector2i loc, int id, int imagesPerLine) {
 	this->id = id;
-	this->type = type;
 
-	sprite.setTexture(texture);
-	sprite.setTextureRect(sf::IntRect(id * Grid::width, (id * Grid::height) % blocksPerLine, Grid::width, Grid::height));
+	sprite.setTexture(*texture);
+
+	id--;
+
+	sprite.setTextureRect(sf::IntRect((id % imagesPerLine) * Grid::width, (id / imagesPerLine) * Grid::height, Grid::width, Grid::height));
+
 	sprite.setPosition(loc.x * Grid::width, loc.y * Grid::height);
 }
 

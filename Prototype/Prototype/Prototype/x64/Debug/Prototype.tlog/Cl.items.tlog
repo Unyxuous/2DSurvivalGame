@@ -1,11 +1,15 @@
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Block.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Block.obj
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Button.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Button.obj
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Character.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Character.obj
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Click.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Click.obj
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Enemy.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Enemy.obj
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\GameStateManager.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\GameStateManager.obj
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Grid.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Grid.obj
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Inventory.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Inventory.obj
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Item.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Item.obj
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\main.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\main.obj
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Player.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Player.obj
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\PlayerState.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\PlayerState.obj
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slider.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Slider.obj
+C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\Slot.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\Slot.obj
 C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\World.cpp;C:\Users\Potatocakes\Desktop\GitHub\Prototype\Prototype\Prototype\x64\Debug\World.obj

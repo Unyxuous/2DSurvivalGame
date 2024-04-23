@@ -4,12 +4,22 @@ PlayerState::~PlayerState() {
 	
 }
 
-void IdleState::manageInput(sf::RenderWindow& window, World& world, Player& player) {
+void IdleState::manageInput(sf::RenderWindow& window, sf::View view, World& world, Player& player) {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::D)) {
 		player.playerState = player.walking;
 	}
 	else if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-		player.useItem(window, world);
+		if (!Click::clicked) {
+			player.useItem(window, view, world);
+			Click::clicked = true;
+		}
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::Space) && player.onGround) {
+		player.playerState = player.jumping;
+		player.onGround = false;
+	}
+	else {
+		Click::clicked = false;
 	}
 }
 
@@ -21,8 +31,12 @@ IdleState::~IdleState() {
 
 }
 
-void WalkState::manageInput(sf::RenderWindow& window, World& world, Player& player) {
-	if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::A) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::D)) {
+void WalkState::manageInput(sf::RenderWindow& window, sf::View view, World& world, Player& player) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::Space) && player.onGround) {
+		player.playerState = player.jumping;
+		player.onGround = false;
+	}
+	else if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::A) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::D)) {
 		player.playerState = player.idle;
 	}
 }
@@ -40,12 +54,19 @@ WalkState::~WalkState() {
 	
 }
 
-void JumpState::manageInput(sf::RenderWindow&, World&, Player&) {
-	
+void JumpState::manageInput(sf::RenderWindow& window, sf::View view, World& world, Player& player) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::D)) {
+		player.playerState = player.walking;
+	}
+	else {
+		player.playerState = player.idle;
+	}
 }
 
-void JumpState::update(Player&) {
-	
+void JumpState::update(Player& player) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan::Space)) {
+		player.move(sf::Vector2f(0.f, -10.f));
+	}
 }
 
 JumpState::~JumpState() {

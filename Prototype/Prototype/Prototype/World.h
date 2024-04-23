@@ -13,8 +13,10 @@
 class World
 {
 private:
-	const unsigned int width = 10;
-	const unsigned int height = 10;
+	const unsigned int width = 100;
+	const unsigned int height = 50;
+
+	std::string key = "world";
 
 	void generate();
 
@@ -33,6 +35,7 @@ public:
 
 	void save();
 	void load(leveldb::DB*);
+	void regenerate();
 	void draw(sf::RenderWindow&);
 };
 

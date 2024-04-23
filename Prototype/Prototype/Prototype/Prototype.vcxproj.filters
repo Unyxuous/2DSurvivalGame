@@ -61,6 +61,12 @@
     <Filter Include="Header Files\HelperFunctions">
       <UniqueIdentifier>{eec27ebc-5859-459d-a38b-599ae53bb626}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Inventory">
+      <UniqueIdentifier>{e19d3cc1-d8a1-44e3-9597-0d5959d6c414}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Inventory">
+      <UniqueIdentifier>{42d21fb1-83fa-482d-8991-a413122c9af4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -96,6 +102,18 @@
     <ClCompile Include="Grid.cpp">
       <Filter>Source Files\HelperFunctions</Filter>
     </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Source Files\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Slot.cpp">
+      <Filter>Source Files\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Click.cpp">
+      <Filter>Source Files\HelperFunctions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h">
@@ -126,6 +144,18 @@
       <Filter>Header Files\Entities</Filter>
     </ClInclude>
     <ClInclude Include="Grid.h">
+      <Filter>Header Files\HelperFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Header Files\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Slot.h">
+      <Filter>Header Files\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Click.h">
       <Filter>Header Files\HelperFunctions</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,6 +2,7 @@
 
 GameStateManager::GameStateManager() {
     window.create(sf::VideoMode(640, 640), "Prototype!", sf::Style::Close);
+    view.setSize(window.getSize().x, window.getSize().y);
 
     menuBackground.setSize(sf::Vector2f(window.getSize().x, window.getSize().y));
     menuBackground.setFillColor(sf::Color(0, 127, 0, 255));
@@ -15,14 +16,16 @@ GameStateManager::GameStateManager() {
 }
 
 void GameStateManager::clickContinue() {
-    //load old save first
     gameState = GameState::InGame;
     switchState();
 }
 
 void GameStateManager::clickNewGame() {
     //delete old save if exists
+    world.regenerate();
+
     gameState = GameState::InGame;
+
     switchState();
 }
 
@@ -214,12 +217,27 @@ void GameStateManager::displayInGame() {
     sliders.clear();
     window.clear();
 
-    player.manageInput(window, world);
-    player.update();
+    player.manageInput(window, view, world);
+    player.update(world);
 
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) && gameState == GameState::InGame) {
+        gameState = GameState::MainMenu;
+    }
+
+    // Draw background here so it will always show
     window.draw(background);
+
+    view.setCenter(player.getPosition());
+    window.setView(view);
+
     world.draw(window);
     player.draw(window);
+
+    // Set the default view back
+    window.setView(window.getDefaultView());
+
+    // Draw UI stuff
+    player.drawInventory(window);
 
     window.display();
 }
@@ -249,7 +267,7 @@ void GameStateManager::switchState() {
 }
 
 void GameStateManager::play() {
-    bool clicked = false;
+    sf::Clock clock;
 
     while (window.isOpen())
     {
@@ -261,27 +279,30 @@ void GameStateManager::play() {
             }
 
             if (event.type == sf::Event::MouseButtonReleased) {
-                clicked = false;
+                Click::clicked = false;
             }
 
             if (event.type == sf::Event::MouseButtonPressed) {
                 if (buttons.size() != 0) {
                     for (Button* btn : buttons) {
-                        if (!clicked && btn->click(sf::Mouse::getPosition(window))) {
-                            clicked = true;
+                        if (!Click::clicked && btn->click(sf::Mouse::getPosition(window))) {
+                            Click::clicked = true;
                         }
                     }
                 }
                 if (sliders.size() != 0) {
                     for (Slider* sldr : sliders) {
-                        if (!clicked && sldr->click(sf::Mouse::getPosition(window))) {
-                            clicked = true;
+                        if (!Click::clicked && sldr->click(sf::Mouse::getPosition(window))) {
+                            Click::clicked = true;
                         }
                     }
                 }
             }
+        }
 
+        if (clock.getElapsedTime() > sf::milliseconds(5)) {
             switchState();
+            clock.restart();
         }
     }
 }

@@ -28,8 +28,24 @@ void World::generate() {
 		for (unsigned int j = 0; j < width; j++) {
 			if (i > height / 2) {
 				std::string location = Grid::iToStr(j, i);
-				Block* newBlock = new Block(blocksImage, blocksPerLine, sf::Vector2i(j, i), 2, Block::BlockType::dirt);
-				worldBlocks.emplace(location, newBlock);
+				
+				Block* newBlock = nullptr;
+
+				switch (i) {
+				case 26:
+					newBlock = new Block(&blocksImage, sf::Vector2i(j, i), 3, blocksPerLine);
+					break;
+				case 27:
+				case 28:
+					newBlock = new Block(&blocksImage, sf::Vector2i(j, i), 2, blocksPerLine);
+					break;
+				default:
+					newBlock = new Block(&blocksImage, sf::Vector2i(j, i), 1, blocksPerLine);
+				}
+
+				if (newBlock != nullptr) {
+					worldBlocks.emplace(location, newBlock);
+				}
 			}
 		}
 	}
@@ -37,6 +53,24 @@ void World::generate() {
 	firstPlay = true;
 
 	save();
+}
+
+void World::regenerate() {
+	leveldb::DB* db;
+	leveldb::Options options;
+	options.create_if_missing = true;
+	leveldb::Status status = leveldb::DB::Open(options, "./world", &db);
+	if (!status.ok())
+	{
+		std::cout << status.ToString();
+	}
+
+	//delete old save first
+	db->Delete(leveldb::WriteOptions(), key);
+
+	delete db;
+
+	generate();
 }
 
 void World::save() {
@@ -49,7 +83,6 @@ void World::save() {
 		std::cout << status.ToString();
 	}
 
-	std::string key = "world";
 	std::string worldData = "";
 	for (unsigned int i = 0; i < height; i++) {
 		for (unsigned int j = 0; j < width; j++) {
@@ -63,6 +96,8 @@ void World::save() {
 			}
 		}
 	}
+
+	firstPlay = false;
 
 	db->Put(leveldb::WriteOptions(), key, worldData);
 
@@ -84,7 +119,7 @@ void World::load(leveldb::DB* db) {
 			int blockID = worldData[index] - '0';
 
 			if (blockID != 0) {
-				Block* newBlock = new Block(blocksImage, blocksPerLine, sf::Vector2i(j, i), blockID, Block::getBlockType(blockID));
+				Block* newBlock = new Block(&blocksImage, sf::Vector2i(j, i), blockID, blocksPerLine);
 				worldBlocks.emplace(location, newBlock);
 			}
 

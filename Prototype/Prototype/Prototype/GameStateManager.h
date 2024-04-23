@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "Button.h"
+#include "Click.h"
 #include "Player.h"
 #include "Slider.h"
 #include "World.h"
@@ -14,6 +15,7 @@ class GameStateManager
 {
 private:
 	sf::RenderWindow window;
+	sf::View view;
 
 	sf::Texture backgroundTexture;
 	sf::Sprite background;
