@@ -37,5 +37,7 @@ public:
 	void load(leveldb::DB*);
 	void regenerate();
 	void draw(sf::RenderWindow&);
+
+	void placeTree(sf::Vector2i);
 };
 

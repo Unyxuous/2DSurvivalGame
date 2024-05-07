@@ -114,6 +114,9 @@
     <ClCompile Include="Click.cpp">
       <Filter>Source Files\HelperFunctions</Filter>
     </ClCompile>
+    <ClCompile Include="Tool.cpp">
+      <Filter>Source Files\Inventory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h">
@@ -157,6 +160,9 @@
     </ClInclude>
     <ClInclude Include="Click.h">
       <Filter>Header Files\HelperFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="Tool.h">
+      <Filter>Header Files\Inventory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

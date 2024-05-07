@@ -50,6 +50,9 @@ void World::generate() {
 		}
 	}
 
+	//temp
+	placeTree(sf::Vector2i(52, 25));
+
 	firstPlay = true;
 
 	save();
@@ -67,8 +70,8 @@ void World::regenerate() {
 
 	//delete old save first
 	db->Delete(leveldb::WriteOptions(), key);
-
 	delete db;
+	worldBlocks.clear();
 
 	generate();
 }
@@ -132,4 +135,30 @@ void World::draw(sf::RenderWindow& window) {
 	for (auto block : worldBlocks) {
 		block.second->draw(window);
 	}
+}
+
+void World::placeTree(sf::Vector2i loc) {
+	//leaves
+	int leafYLoc = loc.y - 5;
+	int leafXLoc = loc.x - 1;
+
+	Block* newBlock = nullptr;
+
+	for (int i = 0; i < 9; i++) {
+		if (i % 3 == 0) {
+			leafYLoc++;
+			leafXLoc = loc.x - 1;
+		}
+
+		newBlock = new Block(&blocksImage, sf::Vector2i(leafXLoc, leafYLoc), 5, blocksPerLine);
+		worldBlocks.emplace(Grid::iToStr(leafXLoc, leafYLoc), newBlock);
+
+		leafXLoc++;
+	}
+
+	//wood
+	newBlock = new Block(&blocksImage, sf::Vector2i(loc.x, loc.y), 4, blocksPerLine);
+	worldBlocks.emplace(Grid::iToStr(loc.x, loc.y), newBlock);
+	newBlock = new Block(&blocksImage, sf::Vector2i(loc.x, loc.y - 1), 4, blocksPerLine);
+	worldBlocks.emplace(Grid::iToStr(loc.x, loc.y - 1), newBlock);
 }
