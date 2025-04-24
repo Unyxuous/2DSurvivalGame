@@ -10,12 +10,14 @@ void Screen::addSlider(std::function<void(float&)> func, std::string name, sf::V
     sliders.emplace(name, newSlider);
 }
 
-void Screen::addTextbox(std::string name, sf::Vector2f pos, sf::Vector2f size, sf::Color backgroundColor, std::string text, sf::Color textColor, int textLengthLimit, bool numbersOnly) {
-    Textbox newTextbox(pos, size, backgroundColor, text, textColor, textLengthLimit, numbersOnly);
+void Screen::addTextbox(std::function<void()> func, std::string name, sf::Vector2f pos, sf::Vector2f size, sf::Color backgroundColor, std::string text, sf::Color textColor, int textLengthLimit, bool numbersOnly) {
+    Textbox newTextbox(func, pos, size, backgroundColor, text, textColor, textLengthLimit, numbersOnly);
     textboxes.emplace(name, newTextbox);
 }
 
 void Screen::display() {
+    window->clear();
+
     window->setView(window->getDefaultView());
     window->draw(background);
     window->setView(view);
@@ -31,6 +33,8 @@ void Screen::display() {
     for (auto& txtbx : textboxes) {
         txtbx.second.draw(*window);
     }
+
+    window->display();
 }
 
 void Screen::getInput(std::unordered_map<std::string, std::string>& values) {

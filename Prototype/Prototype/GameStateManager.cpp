@@ -83,16 +83,14 @@ void GameStateManager::displayInGame() {
 }
 
 void GameStateManager::displayScreen() {
-    window.clear();
-
     if (gameState == GameState::InGame) {
+        window.clear();
         displayInGame();
+        window.display();
     }
     else {
         activeScreen->display();
     }
-
-    window.display();
 }
 
 void GameStateManager::loadScreens() {
@@ -135,15 +133,15 @@ void GameStateManager::loadScreens() {
     sf::Vector2f backLoc(addBiomeScreenInfo["backLoc"].at(0), addBiomeScreenInfo["backLoc"].at(1));
     sf::Vector2f backSize(addBiomeScreenInfo["backSize"].at(0), addBiomeScreenInfo["backSize"].at(1));
 
-    // name, noiseOffset, noiseScale, terrainHeight, surfaceBlock, surfaceBlockDepth, subsurfaceBlock, subsurfaceBlockDepth
-    addBiomeScreen.addTextbox("name", namePos, nameSize, sf::Color::White, "name", sf::Color::Black, 5, false);
-    addBiomeScreen.addTextbox("noiseOffset", noiseOffsetPos, noiseOffsetSize, sf::Color::White, "noiseOffset", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox("noiseScale", noiseScalePos, noiseScaleSize, sf::Color::White, "noiseScale", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox("terrainHeight", terrainHeightPos, terrainHeightSize, sf::Color::White, "terrainHeight", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox("surfaceBlock", surfaceBlockPos, surfaceBlockSize, sf::Color::White, "surfaceBlock", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox("surfaceBlockDepth", surfaceBlockDepthPos, surfaceBlockDepthSize, sf::Color::White, "surfaceBlockDepth", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox("subsurfaceBlock", subsurfaceBlockPos, subsurfaceBlockSize, sf::Color::White, "subsurfaceBlock", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox("subsurfaceBlockDepth", subsurfaceBlockDepthPos, subsurfaceBlockDepthSize, sf::Color::White, "subsurfaceBlockDepth", sf::Color::Black, 5, true);
+    // screen, name, noiseOffset, noiseScale, terrainHeight, surfaceBlock, surfaceBlockDepth, subsurfaceBlock, subsurfaceBlockDepth
+    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "name", namePos, nameSize, sf::Color::White, "name", sf::Color::Black, 5, false);
+    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "noiseOffset", noiseOffsetPos, noiseOffsetSize, sf::Color::White, "noiseOffset", sf::Color::Black, 5, true);
+    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "noiseScale", noiseScalePos, noiseScaleSize, sf::Color::White, "noiseScale", sf::Color::Black, 5, true);
+    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "terrainHeight", terrainHeightPos, terrainHeightSize, sf::Color::White, "terrainHeight", sf::Color::Black, 5, true);
+    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "surfaceBlock", surfaceBlockPos, surfaceBlockSize, sf::Color::White, "surfaceBlock", sf::Color::Black, 5, true);
+    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "surfaceBlockDepth", surfaceBlockDepthPos, surfaceBlockDepthSize, sf::Color::White, "surfaceBlockDepth", sf::Color::Black, 5, true);
+    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "subsurfaceBlock", subsurfaceBlockPos, subsurfaceBlockSize, sf::Color::White, "subsurfaceBlock", sf::Color::Black, 5, true);
+    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "subsurfaceBlockDepth", subsurfaceBlockDepthPos, subsurfaceBlockDepthSize, sf::Color::White, "subsurfaceBlockDepth", sf::Color::Black, 5, true);
     
     addBiomeScreen.addButton([this]() { clickSaveBiome(); }, saveLoc, saveSize, sf::Color::White, "Save", sf::Color::Black);
     addBiomeScreen.addButton([this]() { this->activeScreen->clearInput(); gameState = prevGameState; }, backLoc, backSize, sf::Color::White, "Back", sf::Color::Black);

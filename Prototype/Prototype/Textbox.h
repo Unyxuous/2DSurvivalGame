@@ -23,11 +23,13 @@ private:
 	std::string input = "";
 	sf::Font* font;
 
+	std::function<void()> onEdit;
+
 public:
-	// location, size, image, text, textColor, textLengthLimit, numbersOnly
-	Textbox(sf::Vector2f, sf::Vector2f, sf::Sprite&, std::string, sf::Color, int, bool);
-	// location, size, backgroundColor, text, textColor, textLengthLimit, numbersOnly
-	Textbox(sf::Vector2f, sf::Vector2f, sf::Color, std::string, sf::Color, int, bool);
+	// function, location, size, image, text, textColor, textLengthLimit, numbersOnly
+	Textbox(std::function<void()>, sf::Vector2f, sf::Vector2f, sf::Sprite&, std::string, sf::Color, int, bool);
+	// function, location, size, backgroundColor, text, textColor, textLengthLimit, numbersOnly
+	Textbox(std::function<void()>, sf::Vector2f, sf::Vector2f, sf::Color, std::string, sf::Color, int, bool);
 
 	void clear() { input = ""; btnText.setString(input); }
 	bool click(sf::RenderWindow&, sf::Vector2i);

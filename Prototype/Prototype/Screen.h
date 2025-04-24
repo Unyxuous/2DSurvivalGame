@@ -27,8 +27,8 @@ public:
 	void addButton(std::function<void()>, sf::Vector2f, sf::Vector2f, sf::Color, std::string, sf::Color);
 	// function, name, position, size, minValue, maxValue, currentValue, color
 	void addSlider(std::function<void(float&)>, std::string, sf::Vector2f, sf::Vector2f, float, float, float, sf::Color);
-	// name, position, size, backgroundColor, text, textColor, textLengthLimit, numbersOnly
-	void addTextbox(std::string, sf::Vector2f, sf::Vector2f, sf::Color, std::string, sf::Color, int, bool);
+	// function, name, position, size, backgroundColor, text, textColor, textLengthLimit, numbersOnly
+	void addTextbox(std::function<void()>, std::string, sf::Vector2f, sf::Vector2f, sf::Color, std::string, sf::Color, int, bool);
 
 	void display();
 

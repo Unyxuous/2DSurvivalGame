@@ -1,6 +1,6 @@
 #include "Textbox.h"
 
-Textbox::Textbox(sf::Vector2f location, sf::Vector2f size, sf::Sprite& sprite, std::string text, sf::Color txtColor, int textLengthLimit, bool numbersOnly) {
+Textbox::Textbox(std::function<void()> func, sf::Vector2f location, sf::Vector2f size, sf::Sprite& sprite, std::string text, sf::Color txtColor, int textLengthLimit, bool numbersOnly) {
 	font = ResourceLoader::loadFont(FontInfo::defaultFontLocation);
 
 	this->numbersOnly = numbersOnly;
@@ -17,9 +17,11 @@ Textbox::Textbox(sf::Vector2f location, sf::Vector2f size, sf::Sprite& sprite, s
 	btnText = sf::Text("", *font);
 	btnText.setPosition(location);
 	btnText.setFillColor(txtColor);
+
+	onEdit = func;
 }
 
-Textbox::Textbox(sf::Vector2f location, sf::Vector2f size, sf::Color color, std::string text, sf::Color txtColor, int textLengthLimit, bool numbersOnly) {
+Textbox::Textbox(std::function<void()> func, sf::Vector2f location, sf::Vector2f size, sf::Color color, std::string text, sf::Color txtColor, int textLengthLimit, bool numbersOnly) {
 	font = ResourceLoader::loadFont(FontInfo::defaultFontLocation);
 
 	this->numbersOnly = numbersOnly;
@@ -38,6 +40,8 @@ Textbox::Textbox(sf::Vector2f location, sf::Vector2f size, sf::Color color, std:
 	btnText = sf::Text("", *font);
 	btnText.setPosition(location);
 	btnText.setFillColor(txtColor);
+
+	onEdit = func;
 }
 
 void Textbox::draw(sf::RenderWindow& window) {
@@ -51,6 +55,8 @@ bool Textbox::click(sf::RenderWindow& window, sf::Vector2i pos) {
 	if (btnClickableArea.contains(pos.x, pos.y)) {
 		sf::Event e;
 		bool done = false;
+		bool clicked = true;
+
 		while (!done) {
 			if (window.pollEvent(e) && e.type == sf::Event::TextEntered) {
 				auto& enteredCode = e.text.unicode;
@@ -66,9 +72,20 @@ bool Textbox::click(sf::RenderWindow& window, sf::Vector2i pos) {
 				}
 
 				btnText.setString(input);
+
+				onEdit();
 			}
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+
+			// click out of textbox to stop typing
+			sf::Vector2i newPos;
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && !btnClickableArea.contains(newPos.x, newPos.y) && !clicked) {
 				done = true;
+			}
+			else if (!sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+				clicked = false;
+			}
+			if (!clicked) {
+				newPos = sf::Mouse::getPosition();
 			}
 		}
 
