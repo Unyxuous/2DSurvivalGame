@@ -1,0 +1,199 @@
+{
+  "addBiomeScreen": {
+    "backLoc": [
+      300,
+      500
+    ],
+    "backSize": [
+      150,
+      50
+    ],
+    "namePos": [
+      100,
+      100
+    ],
+    "nameSize": [
+      100,
+      50
+    ],
+    "noiseOffsetPos": [
+      100,
+      200
+    ],
+    "noiseOffsetSize": [
+      100,
+      50
+    ],
+    "noiseScalePos": [
+      100,
+      300
+    ],
+    "noiseScaleSize": [
+      100,
+      50
+    ],
+    "saveLoc": [
+      300,
+      400
+    ],
+    "saveSize": [
+      150,
+      50
+    ],
+    "subsurfaceBlockDepthPos": [
+      300,
+      300
+    ],
+    "subsurfaceBlockDepthSize": [
+      100,
+      50
+    ],
+    "subsurfaceBlockPos": [
+      300,
+      200
+    ],
+    "subsurfaceBlockSize": [
+      100,
+      50
+    ],
+    "surfaceBlockDepthPos": [
+      300,
+      100
+    ],
+    "surfaceBlockDepthSize": [
+      100,
+      50
+    ],
+    "surfaceBlockPos": [
+      100,
+      500
+    ],
+    "surfaceBlockSize": [
+      100,
+      50
+    ],
+    "terrainHeightPos": [
+      100,
+      400
+    ],
+    "terrainHeightSize": [
+      100,
+      50
+    ]
+  },
+  "audioSettingsScreen": {
+    "backLoc": [
+      100,
+      300
+    ],
+    "backSize": [
+      150,
+      50
+    ],
+    "musicPos": [
+      100,
+      100
+    ],
+    "musicSize": [
+      100,
+      10
+    ],
+    "musicSlider": "music",
+    "sfxPos": [
+      100,
+      200
+    ],
+    "sfxSize": [
+      100,
+      10
+    ],
+    "sfxSlider": "sfx"
+  },
+  "mainMenuScreen": {
+    "addBiomeLoc": [
+      100,
+      300
+    ],
+    "addBiomeSize": [
+      150,
+      50
+    ],
+    "continueLoc": [
+      100,
+      100
+    ],
+    "continueSize": [
+      150,
+      50
+    ],
+    "exitLoc": [
+      100,
+      500
+    ],
+    "exitSize": [
+      150,
+      50
+    ],
+    "newGameLoc": [
+      100,
+      200
+    ],
+    "newGameSize": [
+      150,
+      50
+    ],
+    "settingsLoc": [
+      100,
+      400
+    ],
+    "settingsSize": [
+      150,
+      50
+    ]
+  },
+  "settingsScreen": {
+    "audioLoc": [
+      100,
+      100
+    ],
+    "audioSize": [
+      150,
+      50
+    ],
+    "backLoc": [
+      100,
+      300
+    ],
+    "backSize": [
+      150,
+      50
+    ],
+    "videoLoc": [
+      100,
+      200
+    ],
+    "videoSize": [
+      150,
+      50
+    ]
+  },
+  "videoSettingsScreen": {
+    "backLoc": [
+      100,
+      300
+    ],
+    "backSize": [
+      150,
+      50
+    ],
+    "brightnessPos": [
+      100,
+      100
+    ],
+    "brightnessSize": [
+      100,
+      10
+    ],
+    "brightnessSlider": "brightness"
+  }
+}

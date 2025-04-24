@@ -1,0 +1,29 @@
+{
+  "des": {
+    "noiseOffset": 23.04,
+    "noiseScale": 70.04,
+    "subsurfaceBlock": 11,
+    "subsurfaceBlockDepth": 3,
+    "surfaceBlock": 10,
+    "surfaceBlockDepth": 1,
+    "terrainHeight": 5
+  },
+  "plain": {
+    "noiseOffset": 0.02,
+    "noiseScale": 30.0,
+    "subsurfaceBlock": 2,
+    "subsurfaceBlockDepth": 2,
+    "surfaceBlock": 3,
+    "surfaceBlockDepth": 1,
+    "terrainHeight": 10
+  },
+  "stone": {
+    "noiseOffset": 4.7,
+    "noiseScale": 5.0,
+    "subsurfaceBlock": 1,
+    "subsurfaceBlockDepth": 1,
+    "surfaceBlock": 9,
+    "surfaceBlockDepth": 1,
+    "terrainHeight": 40
+  }
+}
