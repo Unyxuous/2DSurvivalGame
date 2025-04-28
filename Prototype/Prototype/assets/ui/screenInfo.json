@@ -1,86 +1,4 @@
 {
-  "addBiomeScreen": {
-    "backLoc": [
-      300,
-      500
-    ],
-    "backSize": [
-      150,
-      50
-    ],
-    "namePos": [
-      100,
-      100
-    ],
-    "nameSize": [
-      100,
-      50
-    ],
-    "noiseOffsetPos": [
-      100,
-      200
-    ],
-    "noiseOffsetSize": [
-      100,
-      50
-    ],
-    "noiseScalePos": [
-      100,
-      300
-    ],
-    "noiseScaleSize": [
-      100,
-      50
-    ],
-    "saveLoc": [
-      300,
-      400
-    ],
-    "saveSize": [
-      150,
-      50
-    ],
-    "subsurfaceBlockDepthPos": [
-      300,
-      300
-    ],
-    "subsurfaceBlockDepthSize": [
-      100,
-      50
-    ],
-    "subsurfaceBlockPos": [
-      300,
-      200
-    ],
-    "subsurfaceBlockSize": [
-      100,
-      50
-    ],
-    "surfaceBlockDepthPos": [
-      300,
-      100
-    ],
-    "surfaceBlockDepthSize": [
-      100,
-      50
-    ],
-    "surfaceBlockPos": [
-      100,
-      500
-    ],
-    "surfaceBlockSize": [
-      100,
-      50
-    ],
-    "terrainHeightPos": [
-      100,
-      400
-    ],
-    "terrainHeightSize": [
-      100,
-      50
-    ]
-  },
   "audioSettingsScreen": {
     "backLoc": [
       100,
@@ -128,7 +46,7 @@
     ],
     "exitLoc": [
       100,
-      500
+      400
     ],
     "exitSize": [
       150,
@@ -144,7 +62,7 @@
     ],
     "settingsLoc": [
       100,
-      400
+      300
     ],
     "settingsSize": [
       150,

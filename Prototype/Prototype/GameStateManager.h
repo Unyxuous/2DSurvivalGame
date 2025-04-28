@@ -31,7 +31,7 @@ private:
 	Screen* activeScreen = nullptr;
 	std::unordered_map<std::string, Screen> screens;
 
-	enum class GameState { AddBiome, AudioSettingsMenu, InGame, MainMenu, SettingsMenu, VideoSettingsMenu };
+	enum class GameState { AudioSettingsMenu, InGame, MainMenu, SettingsMenu, VideoSettingsMenu };
 	GameState prevGameState = GameState::MainMenu;
 	GameState gameState = GameState::MainMenu;
 

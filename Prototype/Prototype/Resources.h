@@ -22,8 +22,6 @@ namespace FontInfo {
 }
 
 namespace UiInfo {
-	// screen names
-	const std::string addBiomeScreenName = "addBiomeScreen";
 	const std::string audioSettingsScreenName = "audioSettingsScreen";
 	const std::string mainMenuScreenName = "mainMenuScreen";
 	const std::string settingsScreenName = "settingsScreen";

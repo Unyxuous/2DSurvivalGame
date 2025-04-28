@@ -100,53 +100,6 @@ void GameStateManager::loadScreens() {
     inFile >> screenInfo;
     inFile.close();
 
-    // addBiome
-    Screen addBiomeScreen(&window);
-    auto& addBiomeScreenInfo = screenInfo[UiInfo::addBiomeScreenName];
-    sf::Vector2f namePos(addBiomeScreenInfo["namePos"].at(0), addBiomeScreenInfo["namePos"].at(1));
-    sf::Vector2f nameSize(addBiomeScreenInfo["nameSize"].at(0), addBiomeScreenInfo["nameSize"].at(1));
-
-    sf::Vector2f noiseOffsetPos(addBiomeScreenInfo["noiseOffsetPos"].at(0), addBiomeScreenInfo["noiseOffsetPos"].at(1));
-    sf::Vector2f noiseOffsetSize(addBiomeScreenInfo["noiseOffsetSize"].at(0), addBiomeScreenInfo["noiseOffsetSize"].at(1));
-
-    sf::Vector2f noiseScalePos(addBiomeScreenInfo["noiseScalePos"].at(0), addBiomeScreenInfo["noiseScalePos"].at(1));
-    sf::Vector2f noiseScaleSize(addBiomeScreenInfo["noiseScaleSize"].at(0), addBiomeScreenInfo["noiseScaleSize"].at(1));
-
-    sf::Vector2f terrainHeightPos(addBiomeScreenInfo["terrainHeightPos"].at(0), addBiomeScreenInfo["terrainHeightPos"].at(1));
-    sf::Vector2f terrainHeightSize(addBiomeScreenInfo["terrainHeightSize"].at(0), addBiomeScreenInfo["terrainHeightSize"].at(1));
-
-    sf::Vector2f surfaceBlockPos(addBiomeScreenInfo["surfaceBlockPos"].at(0), addBiomeScreenInfo["surfaceBlockPos"].at(1));
-    sf::Vector2f surfaceBlockSize(addBiomeScreenInfo["surfaceBlockSize"].at(0), addBiomeScreenInfo["surfaceBlockSize"].at(1));
-
-    sf::Vector2f surfaceBlockDepthPos(addBiomeScreenInfo["surfaceBlockDepthPos"].at(0), addBiomeScreenInfo["surfaceBlockDepthPos"].at(1));
-    sf::Vector2f surfaceBlockDepthSize(addBiomeScreenInfo["surfaceBlockDepthSize"].at(0), addBiomeScreenInfo["surfaceBlockDepthSize"].at(1));
-
-    sf::Vector2f subsurfaceBlockPos(addBiomeScreenInfo["subsurfaceBlockPos"].at(0), addBiomeScreenInfo["subsurfaceBlockPos"].at(1));
-    sf::Vector2f subsurfaceBlockSize(addBiomeScreenInfo["subsurfaceBlockSize"].at(0), addBiomeScreenInfo["subsurfaceBlockSize"].at(1));
-
-    sf::Vector2f subsurfaceBlockDepthPos(addBiomeScreenInfo["subsurfaceBlockDepthPos"].at(0), addBiomeScreenInfo["subsurfaceBlockDepthPos"].at(1));
-    sf::Vector2f subsurfaceBlockDepthSize(addBiomeScreenInfo["subsurfaceBlockDepthSize"].at(0), addBiomeScreenInfo["subsurfaceBlockDepthSize"].at(1));
-
-    sf::Vector2f saveLoc(addBiomeScreenInfo["saveLoc"].at(0), addBiomeScreenInfo["saveLoc"].at(1));
-    sf::Vector2f saveSize(addBiomeScreenInfo["saveSize"].at(0), addBiomeScreenInfo["saveSize"].at(1));
-
-    sf::Vector2f backLoc(addBiomeScreenInfo["backLoc"].at(0), addBiomeScreenInfo["backLoc"].at(1));
-    sf::Vector2f backSize(addBiomeScreenInfo["backSize"].at(0), addBiomeScreenInfo["backSize"].at(1));
-
-    // screen, name, noiseOffset, noiseScale, terrainHeight, surfaceBlock, surfaceBlockDepth, subsurfaceBlock, subsurfaceBlockDepth
-    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "name", namePos, nameSize, sf::Color::White, "name", sf::Color::Black, 5, false);
-    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "noiseOffset", noiseOffsetPos, noiseOffsetSize, sf::Color::White, "noiseOffset", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "noiseScale", noiseScalePos, noiseScaleSize, sf::Color::White, "noiseScale", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "terrainHeight", terrainHeightPos, terrainHeightSize, sf::Color::White, "terrainHeight", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "surfaceBlock", surfaceBlockPos, surfaceBlockSize, sf::Color::White, "surfaceBlock", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "surfaceBlockDepth", surfaceBlockDepthPos, surfaceBlockDepthSize, sf::Color::White, "surfaceBlockDepth", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "subsurfaceBlock", subsurfaceBlockPos, subsurfaceBlockSize, sf::Color::White, "subsurfaceBlock", sf::Color::Black, 5, true);
-    addBiomeScreen.addTextbox([this]() { this->activeScreen->display(); }, "subsurfaceBlockDepth", subsurfaceBlockDepthPos, subsurfaceBlockDepthSize, sf::Color::White, "subsurfaceBlockDepth", sf::Color::Black, 5, true);
-    
-    addBiomeScreen.addButton([this]() { clickSaveBiome(); }, saveLoc, saveSize, sf::Color::White, "Save", sf::Color::Black);
-    addBiomeScreen.addButton([this]() { this->activeScreen->clearInput(); gameState = prevGameState; }, backLoc, backSize, sf::Color::White, "Back", sf::Color::Black);
-    screens.emplace(UiInfo::addBiomeScreenName, addBiomeScreen);
-
     // audioSettings
     Screen audioSettingsScreen(&window);
     auto& audioSettingsScreenInfo = screenInfo[UiInfo::audioSettingsScreenName];
@@ -156,8 +109,8 @@ void GameStateManager::loadScreens() {
     sf::Vector2f sfxPos(audioSettingsScreenInfo["sfxPos"].at(0), audioSettingsScreenInfo["sfxPos"].at(1));
     sf::Vector2f sfxSize(audioSettingsScreenInfo["sfxSize"].at(0), audioSettingsScreenInfo["sfxSize"].at(1));
 
-    backLoc = sf::Vector2f(audioSettingsScreenInfo["backLoc"].at(0), audioSettingsScreenInfo["backLoc"].at(1));
-    backSize = sf::Vector2f(audioSettingsScreenInfo["backSize"].at(0), audioSettingsScreenInfo["backSize"].at(1));
+    sf::Vector2f backLoc = sf::Vector2f(audioSettingsScreenInfo["backLoc"].at(0), audioSettingsScreenInfo["backLoc"].at(1));
+    sf::Vector2f backSize = sf::Vector2f(audioSettingsScreenInfo["backSize"].at(0), audioSettingsScreenInfo["backSize"].at(1));
 
     std::string musicSliderName = audioSettingsScreenInfo["musicSlider"];
     std::string sfxSliderName = audioSettingsScreenInfo["sfxSlider"];
@@ -176,9 +129,6 @@ void GameStateManager::loadScreens() {
     sf::Vector2f newGameLoc(mainMenuScreenInfo["newGameLoc"].at(0), mainMenuScreenInfo["newGameLoc"].at(1));
     sf::Vector2f newGameSize(mainMenuScreenInfo["newGameSize"].at(0), mainMenuScreenInfo["newGameSize"].at(1));
 
-    sf::Vector2f addBiomeLoc(mainMenuScreenInfo["addBiomeLoc"].at(0), mainMenuScreenInfo["addBiomeLoc"].at(1));
-    sf::Vector2f addBiomeSize(mainMenuScreenInfo["addBiomeSize"].at(0), mainMenuScreenInfo["addBiomeSize"].at(1));
-
     sf::Vector2f settingsLoc(mainMenuScreenInfo["settingsLoc"].at(0), mainMenuScreenInfo["settingsLoc"].at(1));
     sf::Vector2f settingsSize(mainMenuScreenInfo["settingsSize"].at(0), mainMenuScreenInfo["settingsSize"].at(1));
 
@@ -187,7 +137,6 @@ void GameStateManager::loadScreens() {
 
     mainMenuScreen.addButton([this]() { WorldGen::loadBiomes(); player.reset(); gameState = GameState::InGame; }, continueLoc, continueSize, sf::Color::White, "Continue", sf::Color::Black);
     mainMenuScreen.addButton([this]() { clickNewGame(); }, newGameLoc, newGameSize, sf::Color::White, "New Game", sf::Color::Black);
-    mainMenuScreen.addButton([this]() { gameState = GameState::AddBiome; }, addBiomeLoc, addBiomeSize, sf::Color::White, "Add Biome", sf::Color::Black);
     mainMenuScreen.addButton([this]() { gameState = GameState::SettingsMenu; }, settingsLoc, settingsSize, sf::Color::White, "Settings", sf::Color::Black);
     mainMenuScreen.addButton([this]() { World::save(); window.close(); }, exitLoc, exitSize, sf::Color::White, "Exit", sf::Color::Black);
     screens.emplace(UiInfo::mainMenuScreenName, mainMenuScreen);
@@ -227,10 +176,6 @@ void GameStateManager::loadScreens() {
 
 void GameStateManager::switchState() {
     switch (gameState) {
-    case GameState::AddBiome:
-        prevGameState = GameState::MainMenu;
-        activeScreen = &screens.at(UiInfo::addBiomeScreenName);
-        break;
     case GameState::AudioSettingsMenu:
         prevGameState = GameState::SettingsMenu;
         activeScreen = &screens.at(UiInfo::audioSettingsScreenName);

@@ -40,8 +40,7 @@ public:
 	int getSubsurfaceBlock() const { return subsurfaceBlock; }
 	int getSubsurfaceBlockDepth() const { return subsurfaceBlockDepth; }
 
-	// for use in addBiome screen
-	// 
+
 	// woodID, leafID, min(trunk)Height, max(trunk)Height, noiseOffset, noiseScale, threshold
 	//addTree(int, int, int, int, float, float, float);
 	// blockID, min(spawn)Height, max(spawn)Height, noiseOffset, noiseScale, threshold
