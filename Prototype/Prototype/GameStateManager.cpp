@@ -135,7 +135,7 @@ void GameStateManager::loadScreens() {
     sf::Vector2f exitLoc(mainMenuScreenInfo["exitLoc"].at(0), mainMenuScreenInfo["exitLoc"].at(1));
     sf::Vector2f exitSize(mainMenuScreenInfo["exitSize"].at(0), mainMenuScreenInfo["exitSize"].at(1));
 
-    mainMenuScreen.addButton([this]() { WorldGen::loadBiomes(); player.reset(); gameState = GameState::InGame; }, continueLoc, continueSize, sf::Color::White, "Continue", sf::Color::Black);
+    mainMenuScreen.addButton([this]() { WorldGen::loadData(); player.reset(); gameState = GameState::InGame; }, continueLoc, continueSize, sf::Color::White, "Continue", sf::Color::Black);
     mainMenuScreen.addButton([this]() { clickNewGame(); }, newGameLoc, newGameSize, sf::Color::White, "New Game", sf::Color::Black);
     mainMenuScreen.addButton([this]() { gameState = GameState::SettingsMenu; }, settingsLoc, settingsSize, sf::Color::White, "Settings", sf::Color::Black);
     mainMenuScreen.addButton([this]() { World::save(); window.close(); }, exitLoc, exitSize, sf::Color::White, "Exit", sf::Color::Black);

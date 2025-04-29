@@ -34,3 +34,11 @@ namespace UiInfo {
 namespace BiomeInfo {
 	const std::string biomeInfoLocation = "./assets/biomes/biomeInfo.json";
 }
+
+namespace OreInfo {
+	const std::string oreInfoLocation = "./assets/biomes/defaultOreInfo.json";
+}
+
+namespace StructuresInfo {
+	const std::string structuresInfoLocation = "./assets/biomes/defaultStructuresInfo.json";
+}

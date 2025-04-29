@@ -89,7 +89,7 @@ void World::loadChunks(std::set<std::string> chunksToLoad) {
 }
 
 void World::regenerate() {
-	WorldGen::loadBiomes();
+	WorldGen::loadData();
 	database.deleteWorld();
 	loadedChunks.clear();
 	worldChunks.clear();

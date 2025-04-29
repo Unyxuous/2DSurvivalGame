@@ -19,6 +19,8 @@
 namespace WorldGen {
 	static FastNoiseLite noise;
 	static std::unordered_map<std::string, Biome> biomes;
+	static std::unordered_map<std::string, Ore> defaultOre;
+	static std::unordered_map<std::string, Structure> defaultStructures;
 
 	void generateChunk(Chunk&);
 	void generateGround(Chunk&);
@@ -30,4 +32,7 @@ namespace WorldGen {
 	Biome* getBiome(std::string);
 
 	void loadBiomes();
+	void loadData();
+	void loadStructures();
+	void loadOre();
 }

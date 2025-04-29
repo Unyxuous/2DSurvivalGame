@@ -1,13 +1,17 @@
 #include "Ore.h"
 
-Ore::Ore(int blockID, int minHeight, int maxHeight, float noiseOffset, float noiseScale, float threshold) {
+Ore::Ore(std::string name, int blockID, int minHeight, int maxHeight, float zoneNoiseOffset, float zoneNoiseScale, float zoneThreshold, float placeNoiseOffset, float placeNoiseScale, float placeThreshold) {
+	this->name = name;
 	this->blockID = blockID;
 
 	this->minHeight = minHeight;
 	this->maxHeight = maxHeight;
 
-	this->noiseOffset = noiseOffset;
-	this->noiseScale = noiseScale;
+	this->zoneNoiseOffset = zoneNoiseOffset;
+	this->zoneNoiseScale = zoneNoiseScale;
+	this->zoneThreshold = zoneThreshold;
 
-	this->threshold = threshold;
+	this->placeNoiseOffset = placeNoiseOffset;
+	this->placeNoiseScale = placeNoiseScale;
+	this->placeThreshold = placeThreshold;
 }

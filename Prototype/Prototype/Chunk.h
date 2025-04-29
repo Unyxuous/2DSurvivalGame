@@ -13,8 +13,6 @@ private:
 	std::unordered_map<std::string, Block> chunkBlocks;
 
 public:
-	// location, name of biome, structureIndex
-	std::unordered_map<std::string, std::pair<std::string, int>> chunkStructs;
 	int breakBlock(sf::Vector2i);
 	Chunk(sf::Vector2i);
 	Chunk(sf::Vector2i, std::string);

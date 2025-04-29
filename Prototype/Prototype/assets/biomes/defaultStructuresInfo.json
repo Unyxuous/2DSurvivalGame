@@ -1,0 +1,88 @@
+{
+  "tree": {
+    "maxHeight": 100,
+    "minHeight": 0,
+    "placeNoiseOffset": 40,
+    "placeNoiseScale": 0.1,
+    "placeThreshold": 0.7,
+    "spawnOnSurface": true,
+    "structureBlocks": [
+      [
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ]
+    ],
+    "zoneNoiseOffset": 38,
+    "zoneNoiseScale": 0.4,
+    "zoneThreshold": 0.84
+  },
+  "undergroundHouse": {
+    "maxHeight": 20,
+    "minHeight": 2,
+    "placeNoiseOffset": 54,
+    "placeNoiseScale": 0.01,
+    "placeThreshold": 0.93,
+    "spawnOnSurface": false,
+    "structureBlocks": [
+      [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    ],
+    "zoneNoiseOffset": 51,
+    "zoneNoiseScale": 0.3,
+    "zoneThreshold": 0.9
+  }
+}

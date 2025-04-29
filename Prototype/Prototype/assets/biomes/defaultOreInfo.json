@@ -1,0 +1,57 @@
+{
+  "cave": {
+    "blockID": 0,
+    "maxHeight": 45,
+    "minHeight": 1,
+    "placeNoiseOffset": 45,
+    "placeNoiseScale": 0.3,
+    "placeThreshold": 0.7,
+    "zoneNoiseOffset": 42,
+    "zoneNoiseScale": 0.5,
+    "zoneThreshold": 0.7
+  },
+  "coal": {
+    "blockID": 6,
+    "maxHeight": 100,
+    "minHeight": 1,
+    "placeNoiseOffset": 29,
+    "placeNoiseScale": 0.3,
+    "placeThreshold": 0.93,
+    "zoneNoiseOffset": 27,
+    "zoneNoiseScale": 0.3,
+    "zoneThreshold": 0.7
+  },
+  "dirt": {
+    "blockID": 1,
+    "maxHeight": 100,
+    "minHeight": 1,
+    "placeNoiseOffset": 26,
+    "placeNoiseScale": 0.4,
+    "placeThreshold": 0.9,
+    "zoneNoiseOffset": 17,
+    "zoneNoiseScale": 0.5,
+    "zoneThreshold": 0.7
+  },
+  "gold": {
+    "blockID": 8,
+    "maxHeight": 20,
+    "minHeight": 1,
+    "placeNoiseOffset": 39,
+    "placeNoiseScale": 0.05,
+    "placeThreshold": 0.97,
+    "zoneNoiseOffset": 36,
+    "zoneNoiseScale": 0.2,
+    "zoneThreshold": 0.8
+  },
+  "iron": {
+    "blockID": 7,
+    "maxHeight": 40,
+    "minHeight": 1,
+    "placeNoiseOffset": 35,
+    "placeNoiseScale": 0.1,
+    "placeThreshold": 0.95,
+    "zoneNoiseOffset": 32,
+    "zoneNoiseScale": 0.25,
+    "zoneThreshold": 0.8
+  }
+}

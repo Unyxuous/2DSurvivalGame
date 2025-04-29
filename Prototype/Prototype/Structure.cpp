@@ -1,6 +1,8 @@
 #include "Structure.h"
 
-Structure::Structure(std::vector<std::vector<int>> structureBlocks, bool spawnOnSurface, int minHeight, int maxHeight, float noiseOffset, float noiseScale, float threshold) {
+Structure::Structure(std::string name, std::vector<std::vector<int>> structureBlocks, bool spawnOnSurface, int minHeight, int maxHeight, float zoneNoiseOffset, float zoneNoiseScale, float zoneThreshold, float placeNoiseOffset, float placeNoiseScale, float placeThreshold) {
+	this->name = name;
+	
 	this->structureBlocks = structureBlocks;
 
 	this->spawnOnSurface = spawnOnSurface;
@@ -8,10 +10,13 @@ Structure::Structure(std::vector<std::vector<int>> structureBlocks, bool spawnOn
 	this->minHeight = minHeight;
 	this->maxHeight = maxHeight;
 
-	this->noiseOffset = noiseOffset;
-	this->noiseScale = noiseScale;
+	this->zoneNoiseOffset = zoneNoiseOffset;
+	this->zoneNoiseScale = zoneNoiseScale;
+	this->zoneThreshold = zoneThreshold;
 
-	this->threshold = threshold;
+	this->placeNoiseOffset = placeNoiseOffset;
+	this->placeNoiseScale = placeNoiseScale;
+	this->placeThreshold = placeThreshold;
 
 	// assign height/width
 	height = structureBlocks.size();
@@ -23,20 +28,14 @@ Structure::Structure(std::vector<std::vector<int>> structureBlocks, bool spawnOn
 	width = max;
 }
 
-bool Structure::contains(int x, int y, int pointX, int pointY) const {
+bool Structure::contains(int x, int y, int w, int h, int pointX, int pointY) {
 	return (
-		((pointX >= x) && (pointX <= (x + width))) &&
-		((pointY >= y) && (pointY <= (y + height)))
+		((pointX >= x) && (pointX <= (x + w))) &&
+		((pointY >= y) && (pointY <= (y + h)))
 		);
 }
 
-void Structure::place(Chunk& chunk, int x, int y) {
-	// prevent chunk border issues
-	// can't do this because contains() would no longer be accurate
-	/*if (x + width > Constants::chunkWidth) {
-		x -=  width;
-	}*/
-
+void Structure::place(Chunk& chunk, int x, int y) const {
 	int chunkX = chunk.getCoords().x * Constants::chunkWidth;
 	int currY = y + height;
 

@@ -1,28 +1,38 @@
 #pragma once
 
+#include <string>
+
 class Ore {
 private:
+	std::string name;
 	int blockID;
 
 	int minHeight;
 	int maxHeight;
 
-	float noiseOffset;
-	float noiseScale;
+	float zoneNoiseOffset;
+	float zoneNoiseScale;
+	float zoneThreshold;
 
-	float threshold;
+	float placeNoiseOffset;
+	float placeNoiseScale;
+	float placeThreshold;
 
 public:
-	// blockID, minHeight, maxHeight, noiseOffset, noiseScale, threshold
-	Ore(int, int, int, float, float, float);
+	// name, blockID, minHeight, maxHeight, zoneNoiseOffset, zoneNoiseScale, zoneThreshold, placeNoiseOffset, placeNoiseScale, placeThreshold
+	Ore(std::string, int, int, int, float, float, float, float, float, float);
 
+	std::string getName() const { return name; }
 	int getBlockID() const { return blockID; }
 
 	int getMinHeight() const { return minHeight; }
 	int getMaxHeight() const { return maxHeight; }
 
-	float getNoiseOffset() const { return noiseOffset; }
-	float getNoiseScale() const { return noiseScale; }
+	float getZoneNoiseOffset() const { return zoneNoiseOffset; }
+	float getZoneNoiseScale() const { return zoneNoiseScale; }
+	float getZoneThreshold() const { return zoneThreshold; }
 
-	float getThreshold() const { return threshold; }
+	float getPlaceNoiseOffset() const { return placeNoiseOffset; }
+	float getPlaceNoiseScale() const { return placeNoiseScale; }
+	float getPlaceThreshold() const { return placeThreshold; }
 };

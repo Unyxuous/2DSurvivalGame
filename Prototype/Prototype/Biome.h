@@ -22,8 +22,8 @@ private:
 	int subsurfaceBlockDepth;
 
 public:
-	std::vector<Ore> ores;
-	std::vector<Structure> structures;
+	std::unordered_map<std::string, Ore> ore;
+	std::unordered_map<std::string, Structure> structures;
 
 	// name, noise offset, noise scale, terrain height, surface block id, surface block depth, 
 	// subsurface block id, subsurface block depth
@@ -39,10 +39,4 @@ public:
 	int getSurfaceBlockDepth() const { return surfaceBlockDepth; }
 	int getSubsurfaceBlock() const { return subsurfaceBlock; }
 	int getSubsurfaceBlockDepth() const { return subsurfaceBlockDepth; }
-
-
-	// woodID, leafID, min(trunk)Height, max(trunk)Height, noiseOffset, noiseScale, threshold
-	//addTree(int, int, int, int, float, float, float);
-	// blockID, min(spawn)Height, max(spawn)Height, noiseOffset, noiseScale, threshold
-	//addOre(int, int, int, float, float, float);
 };
